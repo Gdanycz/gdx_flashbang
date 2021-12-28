@@ -1,7 +1,9 @@
 Config = {}
-Config.FlashBangEnabled = true
-Config.StunTime = 20 -- sekund
-Config.AfterStunTime = 30 -- sekund
-Config.FlashBangRange = 30.0 -- v metrech
-Config.Slyset = 3.0 -- v metrech
-Config.Hlasitost = 1.0 -- 0.1 až 1.0
+
+Config.GetSharedObject = "esx:getSharedObject"
+Config.FlashBangEnabled = true -- enable or disable flashbang
+Config.StunTime = 20 -- in seconds
+Config.AfterStunTime = 30 -- in seconds
+Config.FlashBangRange = 30.0 -- in meters
+Config.Hear = 3.0 -- in meters
+Config.Volume = 1.0 -- 0.1 to 1.0

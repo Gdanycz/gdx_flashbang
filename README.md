@@ -1,17 +1,17 @@
 # gdx_flashbang
 Flashbang script
 
-Funkce:
+### Features:
 - Item flashbang
-- Oslnění hráčů poblíž
-- Vypnutí střelby, černá obrazovka, zvuk během oslnění
+- Dazzle nearby players
+- Shooting off, black screen, sound during glare
 
-Požadavky:
+### Requirements:
 - ex_extended
 - InteractSound
 
-Instalace:
-- Vložte gdx_flashbang do resources
-- Do server.cfg vložte "ensure gdx_flashbang"
-- Přidejte do ESX Config Weapons : {name = 'WEAPON_FLASHBANG', label = 'FLASHBANG', components = {}}
-- Vložte soubor "flashbang.ogg" do "resource/interactsound/client/html/sounds/"
+### Install:
+- Insert `gdx_flashbang` into `resources`
+- Put `ensure gdx_flashbang` in `server.cfg`
+- Add Weapons to ESX Config : `{ name = 'WEAPON_FLASHBANG', label = 'FLASHBANG', components = {}}`
+- Paste the file `flashbang.ogg` into `resource/interactsound/client/html/sounds/`

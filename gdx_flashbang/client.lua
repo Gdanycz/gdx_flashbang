@@ -2,7 +2,7 @@
 local ESX = nil
 Citizen.CreateThread(function()
 while ESX == nil do
-		  TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		  TriggerEvent(Config.GetSharedObject, function(obj) ESX = obj end)
 		  Citizen.Wait(0)
 end
 end)
@@ -19,7 +19,6 @@ while true do
 	Wait(2500)
 	local fcord = GetEntityCoords(obj)
 	AddExplosion(fcord.x,fcord.y,fcord.z,'EXPLOSION_PROGRAMMABLEAR',0.0,true,true,1.0)
-	--TriggerServerEvent('InteractSound_SV:PlayWithinDistance', Config.Slyset, 'flashbang', Config.hlasitost)
 	TriggerServerEvent('gdx_flashbang:FlashBangExplodeServer',fcord.x,fcord.y,fcord.z)
 	ESX.Game.DeleteObject(obj)
   end
@@ -75,7 +74,7 @@ DeleteEntity(prob)
 
 if not IsPedInAnyVehicle(PlayerPedId(),false) then
 local player = PlayerPedId()
-TriggerServerEvent('InteractSound_SV:PlayWithinDistance', Config.Slyset, 'flashbang', Config.hlasitost)
+TriggerServerEvent('InteractSound_SV:PlayWithinDistance', Config.Hear, 'flashbang', Config.Volume)
 DisablePlayerFiring(player, true)
 DoScreenFadeOut(100)
         Wait(5000)
